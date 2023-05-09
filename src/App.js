@@ -8,6 +8,7 @@ import {
 import Navbar from './components/Navbar';
 import Home from './components/Home'
 import About from './components/About'
+import NoteState from './context/notes/NoteState';
 
 function App() {
   return (
@@ -15,17 +16,23 @@ function App() {
   
 
   <BrowserRouter>
+  
   <Navbar/>
+  <NoteState>
+  <div className=''>
   <Routes>
 
 
-  <Route path="/"
+  <Route path="/home"
            element={   <Home/> } />
           
           <Route path="/about"
            element={   <About/> } />
 
   </Routes>
+
+  </div>
+  </NoteState>
   </BrowserRouter>
   
   

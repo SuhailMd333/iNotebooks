@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <link rel="stylesheet" to="https://rsms.me/inter/inter.css"></link>
-      <nav className="bg-gray-800">
+      <nav className="bg-gray-800 fixed top-0 left-0 right-0 z-10">
   <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div className="relative flex h-16 items-center justify-between">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -40,13 +40,14 @@ const Navbar = () => {
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-            <Link to="/" className="bg-gray-900 text-purple-500 rounded-md px-3 py-2 text-sm font-medium" aria-current="page">
+            <Link to="/login" className="bg-gray-900 text-purple-500 rounded-md px-3 py-2 text-sm font-medium" aria-current="page">
               
                         INOTEBOOK
               </Link>
-            <Link to="/home" className="text-gray-300 hover:bg-gray-700 hover:text-purple-500 rounded-md px-3 py-2 text-sm font-medium">Home</Link>
-            <Link to="/about" className="text-gray-300 hover:bg-gray-700 hover:text-purple-500 rounded-md px-3 py-2 text-sm font-medium">About</Link>
-            <Link to="/" className="text-gray-300 hover:bg-gray-700 hover:text-purple-500 rounded-md px-3 py-2 text-sm font-medium">Notes</Link>
+            <Link to="/home" className="text-purple-500 hover:bg-gray-700 hover:text-gray-300 rounded-md px-3 py-2 text-sm font-medium">Home</Link>
+            <Link to="/about" className="text-purple-500 hover:bg-gray-700 hover:text-gray-300 rounded-md px-3 py-2 text-sm font-medium">About</Link>
+            <Link to="/login" className="text-purple-500 hover:bg-gray-700 hover:text-gray-300 rounded-md px-3 py-2 text-sm font-medium">Login</Link>
+            <Link to="/signup" className="text-purple-500 hover:bg-gray-700 hover:text-gray-300 rounded-md px-3 py-2 text-sm font-medium">Sign Up</Link>
           </div>
         </div>
       </div>
@@ -77,11 +78,11 @@ const Navbar = () => {
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           --> */}
-          <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
+          <div className=" absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-2">
             {/* <!-- Active: "bg-gray-100", Not Active: "" --> */}
-            {/* <Link to="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</Link>
+            <Link to="/pro" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</Link>
             <Link to="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</Link>
-            <Link to="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</Link> */}
+            <Link to="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</Link>
           </div>
         </div>
       </div>
